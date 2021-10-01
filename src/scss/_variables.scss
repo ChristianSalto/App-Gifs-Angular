@@ -1,0 +1,15 @@
+// scss-docs-start color-variables
+// $warning-light: #fffb00;
+
+// $custom-colors: (
+//   "primary": $warning-light
+// );
+
+// // Merge the maps
+// $theme-colors: map-merge($theme-colors, $custom-colors);
+
+$warning-light: #fffb00;
+
+$theme-colors: (
+  "warning-light": $warning-light,
+);
