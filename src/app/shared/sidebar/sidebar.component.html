@@ -4,7 +4,7 @@
   </h3>
   <hr class="text-warning-light">
   <div class="list-group list-reset">
-    <a *ngFor="let item of history" href="#" class="list-group-item list-group-item-action">
+    <a *ngFor="let item of history" (click)="handleSetItemSearch(item)" href="#" class="list-group-item list-group-item-action">
       {{ item | titlecase }}
     </a>
   </div>

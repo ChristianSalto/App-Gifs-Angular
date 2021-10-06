@@ -5,12 +5,15 @@ import { GifsService } from 'src/app/gifs/services/gifs.service';
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
 })
-export class SidebarComponent  {
+export class SidebarComponent {
+  constructor(private gifsService: GifsService) {}
 
-  constructor(private gifsService:GifsService) { }
-
-  get history(){
-    return this.gifsService.history
+  get history() {
+    return this.gifsService.history;
   }
 
+  handleSetItemSearch(item: string = '') {
+    console.log(item);
+    this.gifsService.searchGifs(item)
+  }
 }
